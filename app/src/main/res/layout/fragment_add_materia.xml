@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".add_materia"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:text="Añadir Materia"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/texto_addMateria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Nombre de la Materia:" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nombre_materia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style_border"
+            android:fontFamily="@font/amatica_sc"
+            android:hint="MATEMATICAS"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:elegantTextHeight="true"/>
+
+        <TextView
+            style="@style/texto_addMateria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Nombre del Profesor:" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nombre_profe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style_border"
+            android:fontFamily="@font/amatica_sc"
+            android:hint="MATEMATICAS"
+            android:padding="8dp"
+            android:textSize="18sp" />
+
+        <TextView
+            style="@style/texto_addMateria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Rama General de la materia:" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight=".28"
+            android:background="@drawable/spinner_border"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/select_rama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/agregar_materia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTintMode="add"
+                android:backgroundTint="#10B3B2"
+                android:fontFamily="@font/amatica_sc"
+                app:cornerRadius="10dp"
+                android:text="agregar materia"
+                android:elevation="10dp"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
